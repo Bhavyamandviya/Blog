@@ -26,20 +26,33 @@ const BlogCard = ({ title, description, category, tags }) => {
                 alignItems: "center",
                 color: "white",
               }}
+              className="pt-3"
             >
-              <p style={{ fontSize: "18px", fontWeight: "bold" }}>Category</p>
+              <p
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  paddingLeft: "10px",
+                }}
+              >
+                Category
+              </p>
               <p
                 style={{
                   fontSize: "18px",
                   fontWeight: "500",
                   color: "#ffb300",
+                  paddingLeft: "10px",
+                  textTransform: "capitalize",
                 }}
               >
                 {category}
               </p>
             </div>
 
-            <p style={{ padding: "10px", color: "white" }}>
+            <p
+              style={{ padding: "10px", color: "white", textAlign: "justify" }}
+            >
               {showFullDescription ? description : description.slice(0, 200)}
               {description.length > 200 && (
                 <Link
